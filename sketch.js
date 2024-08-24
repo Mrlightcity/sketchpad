@@ -14,6 +14,7 @@ const popUp= document.querySelector('.popup');
 const container= document.querySelector('.container');
 
 const pad= document.querySelector('.container .pad');
+pad.addEventListener('mouseover', myColor)
 
 const black= document.querySelector('.black button');
 
@@ -25,6 +26,7 @@ let value;
 
 function theSize(value){
     let padBoxes= (value*value)-1;
+    console.log( padBoxes)
 
     if(value== 2){
         for(let i=0; i<padBoxes; i++){
@@ -137,9 +139,7 @@ const hexCharacters = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
             const randomPosition = Math.floor ( Math.random() * hexCharacters.length ) 
             hexColorRep += getCharacter( randomPosition )
         }
-
+        console.log( hexColorRep)
         return hexColorRep
 
         }
-
-        console.log( generateJustOneColor() )
