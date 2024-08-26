@@ -1,6 +1,13 @@
 let color= "black";
+let click= false;
 
 document.addEventListener("DOMContentLoaded", function(){
+
+    document.querySelector('body').addEventListener('click', function(e){
+        if(e.target.tagName != 'BUTTON'){
+            click = !click
+        }
+    })
 
     const reset= document.querySelector('.reset button');
     reset.addEventListener('click', function(){
@@ -94,11 +101,14 @@ function setColor(choice){
 }
 
 function myColor(){
-    if(color== 'random'){
-        this.style.backgroundColor= generateJustOneColor();
-    }else{
-        this.style.backgroundColor= 'black';
+    if(click){
+        if(color== 'random'){
+            this.style.backgroundColor= generateJustOneColor();
+        }else{
+            this.style.backgroundColor= 'black';
+        }
     }
+    
 }
 
 function getMyValue(){
@@ -139,7 +149,7 @@ const hexCharacters = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
             const randomPosition = Math.floor ( Math.random() * hexCharacters.length ) 
             hexColorRep += getCharacter( randomPosition )
         }
-        console.log( hexColorRep)
+    
         return hexColorRep
 
         }
