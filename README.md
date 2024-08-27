@@ -1,4 +1,4 @@
-The Etch and Sketch project
+The Etch-A-Sketch project
 
 This project is aimed at excercising my knowledge
 in CSS flex box and style, JavaScript functions,
