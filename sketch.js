@@ -1,13 +1,13 @@
 let color= "black";
-let click= false;
+// let click= false;
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    document.querySelector('body').addEventListener('click', function(e){
-        if(e.target.tagName != 'BUTTON'){
-            click = !click
-        }
-    })
+    // document.querySelector('body').addEventListener('click', function(e){
+    //     if(e.target.tagName != 'BUTTON'){
+    //         click = !click
+    //     }
+    // })
 
     const reset= document.querySelector('.reset button');
     reset.addEventListener('click', function(){
@@ -100,15 +100,22 @@ function setColor(choice){
     color = choice;
 }
 
-function myColor(){
-    if(click){
-        if(color== 'random'){
-            this.style.backgroundColor= generateJustOneColor();
-        }else{
-            this.style.backgroundColor= 'black';
-        }
-    }
+// function myColor(){
+//     if(click){
+//         if(color== 'random'){
+//             this.style.backgroundColor= generateJustOneColor();
+//         }else{
+//             this.style.backgroundColor= 'black';
+//         }
+//     }
     
+// }
+function myColor(){
+    if(color== 'random'){
+        this.style.backgroundColor= generateJustOneColor();
+    }else{
+        this.style.backgroundColor= 'black';
+    }
 }
 
 function getMyValue(){
