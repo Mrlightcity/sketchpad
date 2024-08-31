@@ -40,7 +40,7 @@ function theSize(value){
             const div= document.createElement('div');
             div.classList= 'pad';
             div.style.minWidth = '100px';
-            div.addEventListener('mouseenter', myColor);
+            div.addEventListener('pointerenter', myColor);
             container.insertBefore(div, pad);
         }
     
@@ -49,7 +49,7 @@ function theSize(value){
             const div= document.createElement('div');
             div.classList= 'pad';
             div.style.minWidth = '10px';
-            div.addEventListener('mouseenter', myColor);
+            div.addEventListener('pointerenter', myColor);
             container.insertBefore(div, pad);
         }
     
@@ -58,7 +58,7 @@ function theSize(value){
             const div= document.createElement('div');
             div.classList= 'pad';
             div.style.minWidth = '8px';
-            div.addEventListener('mouseenter', myColor);
+            div.addEventListener('pointerenter', myColor);
             container.insertBefore(div, pad);
         }
     }else if(value<=49){
@@ -66,7 +66,7 @@ function theSize(value){
             const div= document.createElement('div');
             div.classList= 'pad';
             div.style.minWidth = '6px';
-            div.addEventListener('mouseenter', myColor);
+            div.addEventListener('pointerenter', myColor);
             container.insertBefore(div, pad);
         }
     }else if(value<= 70){
@@ -74,7 +74,7 @@ function theSize(value){
             const div= document.createElement('div');
             div.classList= 'pad';
             div.style.minWidth = '4px';
-            div.addEventListener('mouseenter', myColor);
+            div.addEventListener('pointerenter', myColor);
             container.insertBefore(div, pad);
         }
     }else if(value<= 100){
@@ -82,7 +82,7 @@ function theSize(value){
             const div= document.createElement('div');
             div.classList= 'pad';
             div.style.minWidth = '2px';
-            div.addEventListener('mouseenter', myColor);
+            div.addEventListener('pointerenter', myColor);
             container.insertBefore(div, pad);
         }
     }
@@ -149,14 +149,13 @@ const hexCharacters = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
         }
 
         function generateJustOneColor(){
+            let hexColorRep = "#"
 
-        let hexColorRep = "#"
-
-        for (let position = 0; position < 6; position++){
-            const randomPosition = Math.floor ( Math.random() * hexCharacters.length ) 
-            hexColorRep += getCharacter( randomPosition )
-        }
+            for (let position = 0; position < 6; position++){
+                const randomPosition = Math.floor ( Math.random() * hexCharacters.length ) 
+                hexColorRep += getCharacter( randomPosition )
+            }
     
-        return hexColorRep
+            return hexColorRep
 
         }
